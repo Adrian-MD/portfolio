@@ -2,5 +2,137 @@
 *,
 *:before,
 *:after {
+-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
         box-sizing: border-box;
+}
+
+/** Colors Variables **/
+:root {
+    --bg-darkdark: #252525;
+    --bg-darklight: #2c2c2c;
+    --base: #2675A3;
+    --onbase: #7AA1C1;
+    --base-lighter: #4388B1;
+    --base-light: #347EA9;
+    --base-dark: #176DA1;
+    --base-darker: #0A6296;
+    --sec1: #4B33B1;
+    --sec1-lighter: #654FBD;
+    --sec1-light: #5841B6;
+    --sec1-dark: #3E23AE;
+    --sec1-darker: #3115A3;
+    --sec2: #3FD328;
+    --sec2-lighter: #5EDA4A;
+    --sec2-light: #4FD639;
+    --sec2-dark: #2DD113;
+    --sec2-darker: #1CC302;
+    --on-dark: #fff;
+    --on-light: #000;
+}
+
+/**Standardize Begin**/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--sec2);
+}
+a {
+    color: var(--base);
+}
+button {
+    border:none;
+    font-size:1.2rem;
+    padding: 1rem 2rem;
+    border-radius:.4rem;
+    background: var(--sec2-light);
+}
+button:hover {
+    cursor: pointer;
+}
+
+.wrapper {
+    padding:4rem;
+}
+/** End Standardize **/
+
+/** Style Away, Adrian! Style Away... **/
+
+body {
+    background: var(--bg-darkdark);
+    color: var(--on-dark);
+    /* padding: 2rem; */
+}
+
+/* HEADER */
+.header {
+    background: var(--base-darker);
+    background-image: url('city2.jpg');
+    background-position: 50% 50%;
+    background-size:cover;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+}
+.overlay {
+    content: "";
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height:100%;
+    z-index: 1;
+    display: block;
+    background:#fff;
+    opacity: .2;
+}
+.header h1 {
+    color: var(--onbase);
+    flex: 1;
+    margin-top:0;
+    z-index: 2;
+}
+.header .nav {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    z-index: 2;
+}
+.header .nav a {
+    font-size: 1.4em;
+    font-weight:600;
+    color: var(--onbase);
+    text-decoration: none;
+}
+
+/* ABOUT */
+
+.about {
+    min-height:50vh;
+}
+
+/* TOOLS */
+
+.tools {
+    min-height:50vh;
+    background: var(--bg-darklight);
+}
+
+/* WORKS */
+
+.works {
+    min-height:50vh;
+}
+ 
+/* FOOTER */
+.footer {
+    background: var(--base-darker);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 20vh;
 }
